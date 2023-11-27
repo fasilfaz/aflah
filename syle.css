@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: black;
+}
+.main-box{
+    height: 400px;
+    width: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.main-box .card{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: orange;
+    border-radius: 15px;
+    transform: rotateY(0deg);
+    padding: 5px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: 0.7s cubic-bezier(0.4,0.2,0.2,1);
+}
+.main-box:hover > .front-face{
+    transform: rotateY(-180deg);
+}
+.main-box .card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.main-box .Back-face{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: rotateY(180deg);
+}
+.main-box:hover > .Back-face{
+    transform: rotateY(0deg);
+}
+.main-box .Back-face img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    background: black;
+}
+.main-box .Back-face .info{
+    text-align: center;
+}
+.Back-face .info .title{
+    font-size: 30px;
+    font-weight: 500;
+}
+.Back-face ul{
+    display: flex;
+}
+.Back-face ul a{
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: black;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid transparent;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.Back-face ul a:hover{
+    background: #fff;
+    color: black;
+    border-color:black;
+}
