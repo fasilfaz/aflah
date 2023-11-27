@@ -24,7 +24,7 @@ html,body{
     height: 100%;
     width: 100%;
     position: absolute;
-    background: orange;
+    background: #ec9d0b;
     border-radius: 15px;
     transform: rotateY(0deg);
     padding: 5px;
